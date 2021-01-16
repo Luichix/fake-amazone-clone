@@ -11,44 +11,44 @@ function Home() {
                     alt=''/>
                 <div className='home_row'>
                     <Product 
-                        id='15131851'
-                        title='The lean startup'
+                        id='131851'
+                        title='Sky startup 1'
                         price={29.99}
-                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg' 
+                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg' 
                         rating={5} />
                     <Product 
-                        id='15151851'
-                        title='The lean startup'
+                        id='5151851'
+                        title='The lean startup 2'
                         price={109.99}
-                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg' 
+                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/PrimeDay/Fuji_Dash_PD_Nonprime__1x._SY304_CB403084762_.jpg' 
                         rating={3} />
                 </div>
                 <div className='home_row'>
                 <Product 
-                        id='15151843'
-                        title='The lean startup'
+                        id='1151843'
+                        title='Show startup 3'
                         price={109.99}
                         image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg' 
                         rating={5} />
                     <Product 
-                        id='151518955'
-                        title='The lean startup'
+                        id='15518955'
+                        title='Win startup 4'
                         price={399.99}
-                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg' 
+                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg' 
                         rating={4} />
                     <Product 
-                        id='15151071'
-                        title='The lean startup'
+                        id='511071'
+                        title='Heavy startup 5'
                         price={59.99}
-                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg' 
+                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg' 
                         rating={2} />
                 </div>
                 <div className='home_row'>
                 <Product 
                         id='96211823'
-                        title='The lean startup'
+                        title='Fuck startup 6'
                         price={10.99}
-                        image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg' 
+                        image='https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg' 
                         rating={3} />
                 </div>
             </div>           
