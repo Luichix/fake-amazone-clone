@@ -10,16 +10,26 @@ export interface Basket {
   price: number;
 }
 
-export type Action = {
-  id?: string;
-  type: string;
-  item?: Basket;
-  user?: User;
+type AddToBasketAction = {
+  type: 'ADD_TO_BASKET';
+  item: Basket;
 };
+
+type RemoveFromBasketAction = {
+  type: 'REMOVE_FROM_BASKET';
+  id: string;
+};
+
+type SetUserAction = {
+  type: 'SET_USER';
+  user: User;
+};
+
+export type Action = AddToBasketAction | RemoveFromBasketAction | SetUserAction;
 
 export type State = {
   basket: Basket[];
-  user?: User;
+  user: User;
 };
 
 export const initialState: State = {
