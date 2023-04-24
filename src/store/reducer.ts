@@ -1,6 +1,8 @@
-export interface User {
-  email?: string;
-}
+// export interface User {
+//   email?: string;
+// }
+
+export type User = any;
 
 export interface Basket {
   id: string;

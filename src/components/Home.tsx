@@ -58,6 +58,38 @@ function Home() {
             image="https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg"
             rating={3}
           />
+          <Product
+            id="96211823"
+            title="Fuck startup 6"
+            price={10.99}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg"
+            rating={3}
+          />
+        </div>
+        <div className="home_row">
+          <Product
+            id="96211823"
+            title="Fuck startup 6"
+            price={10.99}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg"
+            rating={3}
+          />
+        </div>
+        <div className="home_row">
+          <Product
+            id="131851"
+            title="Sky startup 1"
+            price={29.99}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+            rating={5}
+          />
+          <Product
+            id="5151851"
+            title="The lean startup 2"
+            price={109.99}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/PrimeDay/Fuji_Dash_PD_Nonprime__1x._SY304_CB403084762_.jpg"
+            rating={3}
+          />
         </div>
       </div>
     </div>

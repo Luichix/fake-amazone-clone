@@ -1,4 +1,4 @@
-.login {
+.signup {
   background-color: white;
   height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.login_logo {
+.signup_logo {
   margin-top: 20px;
   margin-bottom: 10px;
   object-fit: contain;
@@ -15,7 +15,7 @@
   margin-left: auto;
 }
 
-.login_container {
+.signup_container {
   width: 300px;
   height: fit-content;
   display: flex;
@@ -25,40 +25,47 @@
   padding: 10px 20px;
 }
 
-.login_container > h2 {
+.signup_container > h2 {
   font-weight: 500;
   margin-bottom: 0px;
   font-size: 28px;
   margin-top: 0px;
 }
 
-.login_container > form > h5 {
-  margin-bottom: 5px;
+.signup_container > form > h5 {
+  margin-bottom: 0px;
 }
 
-.login_container > form > input {
+.signup_container > form > input {
   height: 30px;
   margin-bottom: 10px;
   background-color: white;
   width: 98%;
+  border: 1px solid #6666;
 }
 
-.login_container > p {
+.signup_container > p {
   margin-top: 15px;
   font-size: 12px;
 }
+.signup_container p > a {
+  color: #59d;
+  text-decoration: none;
+}
 
-.login_signInButton {
-  background: #f0c14b;
+.signup_signInButton {
   border-radius: 2px;
   width: 100%;
-  height: 30px;
   border: 1px solid;
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
+  background: linear-gradient(to bottom, #ffd489, #f0c14b);
+  padding: 6px 24px;
+  text-align: center;
+  font-size: 14px;
 }
 
-.login_registerButton {
+.signup_registerButton {
   border-radius: 2px;
   width: 100%;
   height: 30px;
