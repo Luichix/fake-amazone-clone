@@ -42,6 +42,7 @@
   background-color: white;
   width: 98%;
   border: 1px solid #6666;
+  text-indent: 5px;
 }
 
 .signup_container > p {
@@ -72,4 +73,23 @@
   border: 1px solid;
   margin-top: 10px;
   border-color: darkgray;
+}
+
+.alert {
+  position: absolute;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 150px;
+  min-height: 20px;
+  top: 10px;
+  right: 0;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  background-color: #e44;
+  color: #fff;
 }

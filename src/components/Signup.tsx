@@ -1,39 +1,87 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Signup.css';
-import { Link, useRoutes } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../services/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 function Signup() {
-  // const history = useRoutes();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+  const [alert, setAlert] = useState({
+    message: '',
+    type: '',
+    active: false,
+  });
 
-  const signIn = (event: any) => {
+  useEffect(() => {
+    const handlerTimeOut = setTimeout(
+      () => {
+        setAlert({
+          message: '',
+          type: '',
+          active: false,
+        });
+      },
+
+      5000
+    );
+
+    return () => {
+      clearTimeout(handlerTimeOut);
+    };
+  }, [alert]);
+
+  const register = (event: any) => {
     event.preventDefault();
+    if (email.length === 0) {
+      setAlert({
+        message: 'Escriba su dirección de correo electrónico',
+        type: 'error',
+        active: true,
+      });
+      return;
+    }
+    if (password.length < 6) {
+      setAlert({
+        message: 'La contraseña debe tener al menos 6 caracteres',
+        type: 'error',
+        active: true,
+      });
+      return;
+    }
 
-    // auth;
-    // .signInWithEmailAndPassword(email, password)
-    // .then((auth: any) => {
-    // history.push('/');
-    // })
-    // .catch((error: any) => alert(error.message));
-  };
+    if (password !== repeatPassword) {
+      setAlert({
+        message: 'Las contraseñas no coinciden',
+        type: 'error',
+        active: true,
+      });
+      return;
+    }
 
-  const register = () => {
-    // auth
-    //   .createUserWithEmailAndPassword(email, password)
-    //   .then((auth) => {
-    //     // it successfully created a new user with email and password
-    //     console.log(auth);
-    //     if (auth) {
-    //       history.push('/');
-    //     }
-    //   })
-    //   .catch((error) => alert(error.message));
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((auth) => {
+        // it successfully created a new user with email and password
+        if (auth) {
+          navigate('/');
+        }
+      })
+      .catch((error) =>
+        setAlert({
+          message: 'Error al crear la cuenta',
+          type: 'error',
+          active: true,
+        })
+      );
     // do some fancy firebase register shitttt......
   };
   return (
     <div className="signup">
+      {alert.active && (
+        <div className={`alert ${alert.type}`}>{alert.message}</div>
+      )}
       <Link to="/">
         <img
           className="signup_logo"
@@ -44,7 +92,7 @@ function Signup() {
 
       <div className="signup_container">
         <h2>Crear cuenta</h2>
-        <form>
+        <form onSubmit={register}>
           <h5>Correo electrónico</h5>
           <input
             type="text"
@@ -61,21 +109,17 @@ function Signup() {
           <h5>Vuelve a escribir la contraseña</h5>
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={repeatPassword}
+            onChange={(e) => setRepeatPassword(e.target.value)}
           />
 
-          <button
-            type="submit"
-            onClick={signIn}
-            className="signup_signInButton"
-          >
+          <button type="submit" className="signup_signInButton">
             Continuar
           </button>
         </form>
 
         <p>
-          Al iniciar sesión, acepta las &nbsp;
+          Al crear una cuenta, acepta las &nbsp;
           <b>Condiciones de uso y venta de AMAZON FAKE CLONE</b>. Consulte
           nuestro <b>Aviso de Privacidad</b> y nuestro <b>Aviso de anuncios </b>
           &nbsp; basado en intereses.
