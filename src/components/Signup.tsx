@@ -120,7 +120,7 @@ function Signup() {
 
         <p>
           Al crear una cuenta, acepta las &nbsp;
-          <b>Condiciones de uso y venta de AMAZON FAKE CLONE</b>. Consulte
+          <b>Condiciones de uso y venta de FAKE AMAZONE CLONE</b>. Consulte
           nuestro <b>Aviso de Privacidad</b> y nuestro <b>Aviso de anuncios </b>
           &nbsp; basado en intereses.
         </p>

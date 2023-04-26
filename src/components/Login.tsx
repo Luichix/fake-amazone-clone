@@ -108,14 +108,14 @@ function Login() {
         <p>
           Al continuar, aceptas las &nbsp;
           <b>Condiciones de uso </b> y el <b>Aviso de privacidad</b>
-          &nbsp; de <b>AMAZON FAKE CLONE</b>.
+          &nbsp; de <b>FAKE AMAZONE CLONE</b>.
         </p>
 
         <p style={{ textAlign: 'center', marginBottom: '0px' }}>
           ¿No tienes una cuenta?
         </p>
         <button className="login_registerButton">
-          <Link to="/signup">Crea tu cuenta de Amazon</Link>
+          <Link to="/signup">Crea tu cuenta de Fake Amazone</Link>
         </button>
       </div>
     </div>
